@@ -141,4 +141,12 @@ public class WeatherManager : MonoBehaviour
             }
         }
     }
+
+    public void TakeScreenshot()
+    {
+        string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+        string filename = $"Screenshot_{timestamp}.png";
+        ScreenCapture.CaptureScreenshot(filename);
+        Debug.Log($"Screenshot saved as {filename}");
+    }
 }
